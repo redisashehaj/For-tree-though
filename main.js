@@ -24,7 +24,7 @@ const carFuels = {
 }
 
 const transportType = {
-    buss: 2,
+    bus: 2,
     subway: 3,
     train: 4,
     air: 5
@@ -37,7 +37,6 @@ const calculateTransport = (kilometers, transType) => kilometers * transportType
 secondQuestion.addEventListener("input", e => {
     const result = calculateCarCO2(e.target.value, fuelType.value);
     carResultField.value = result + ' CO2';
-    console.log(result);
 });
 
 fields.forEach(element => {
@@ -47,6 +46,10 @@ fields.forEach(element => {
         resultField.value = result + ' CO2';
     });
 });
+
+const total = () => {
+
+}
 
 const form = document.querySelector('.form');
 form.addEventListener('submit', (e) => {
