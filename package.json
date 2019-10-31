@@ -1,0 +1,32 @@
+{
+    "name": "hackday",
+    "version": "1.0.0",
+    "description": "An application which will give you an estimated number of trees you will need to plant in order to compensate for the CO2 you emit during your travels",
+    "main": "main.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/redisashehaj/For-tree-though.git"
+    },
+    "keywords": [
+        "tree"
+    ],
+    "author": "Redisa Shehaj",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/redisashehaj/For-tree-though/issues"
+    },
+    "homepage": "https://github.com/redisashehaj/For-tree-though#readme",
+    "devDependencies": {
+        "eslint": "^5.15.3",
+        "eslint-config-airbnb-base": "^13.1.0",
+        "eslint-plugin-import": "^2.16.0"
+    },
+    "dependencies": {
+        "webpack": "^4.41.2",
+        "webpack-cli": "^3.3.4",
+        "webpack-dev-server": "^3.7.2"
+    }
+}
