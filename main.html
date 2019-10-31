@@ -15,49 +15,42 @@
 <body>
     <header class="page-header" style="text-align: center;">Save the world</header>
     <form class="form">
-        <fieldset>
-            <legend>Car</legend>
-            <div class="car-commute-div">
-                <h4 class="car-commute-question-1">Select the type of fuel you use:</h2>
-                    <select class="select-fuel-type" name="select-fuel-type">
+        <legend>Car</legend>
+        <div class="car-commute-div">
+            <h4 class="car-commute-question-1">Select the type of fuel you use:</h2>
+                <select class="select-fuel-type" name="select-fuel-type">
                             <option  value="type of fuel" disabled="disabled">Type of fuel</option>
                                 <option value="petrol">Petrol</option>
                                 <option value="ethanol">Ethanol</option>
                                 <option value="biodiesel">Bio Diesel</option>
                                 <option value="diesel">Diesel Fuel</option>
                         </select>
-                    <h4 class="car-commute-question-2">Enter an estimated number of liters of fuel you use per week :</h2>
-                        <input type="number" class="car-commute-input" id="car-commute-input" style="margin-bottom: 10px;" required>
-        </fieldset>
-        <fieldset>
-            <legend>Bus</legend>
-            <div class="buss-commute-div">
-                <h4 class="bus-travel-question-3">Enter an estimated number of km you travel by bus per week :</h4>
-                <input type="number" class="bus-travel-input" style="margin-bottom: 10px;" required>
-            </div>
-        </fieldset>
-        <fieldset>
-            <legend>Subway</legend>
-            <div class="subway-commute-div">
-                <h4 class="subway-travel-question-4">Enter an estimated number of km you travel with subway per week :</h4>
-                <input type="number" class="subway-travel-input" style="margin-bottom: 10px;" required>
-            </div>
-        </fieldset>
-        <fieldset>
-            <legend>Intercity rail</legend>
-            <div class="intercityrail-commute-div">
-                <h4 class="intercity-travel-question-5">Enter an estimated number of km you travel by long distance train per week :</h4>
-                <input type="number" class="intercity-travel-input" style="margin-bottom: 10px;" required>
-            </div>
-        </fieldset>
-        <fieldset>
-            <legend>Air</legend>
-            <div class="air-commute-div">
-                <h4 class="air-travel-question-6">Enter an estimated number of km you travel by plane per year :</h4>
-                <input type="number" class="air-travel-input" style="margin-bottom: 10px;" required>
-            </div>
-        </fieldset>
-        <input type="button" value="Calculate" class="submit-button" style="margin: 20px"></button>
+                <h4 class="car-commute-question-2">Enter an estimated number of liters of fuel you use per week :</h2>
+                    <input type="number" class="car-commute-input" id="car-commute-input" style="margin-bottom: 10px;" required>
+                    <legend>Bus</legend>
+                    <div class="buss-commute-div">
+                        <h4 class="bus-travel-question-3">Enter an estimated number of km you travel by bus per week :</h4>
+                        <input type="text" value="result" id="car_result" />
+                        <input type="number" class="bus-travel-input" style="margin-bottom: 10px;" id="buss" required>
+                    </div>
+                    <legend>Subway</legend>
+                    <div class="subway-commute-div">
+                        <h4 class="subway-travel-question-4">Enter an estimated number of km you travel with subway per week :</h4>
+                        <input type="number" class="subway-travel-input" style="margin-bottom: 10px;" id="subway" required>
+                    </div>
+
+                    <legend>Intercity rail</legend>
+                    <div class="intercityrail-commute-div">
+                        <h4 class="intercity-travel-question-5">Enter an estimated number of km you travel by long distance train per week :</h4>
+                        <input type="number" class="intercity-travel-input" style="margin-bottom: 10px;" id="train" required>
+                    </div>
+
+                    <legend>Air</legend>
+                    <div class="air-commute-div">
+                        <h4 class="air-travel-question-6">Enter an estimated number of km you travel by plane per year :</h4>
+                        <input type="number" class="air-travel-input" style="margin-bottom: 10px;" id="air" required>
+                    </div>
+                    <input type="submit" value="Calculate" class="submit-button" style="position: center; font-size: 20px; padding: 40px"></button>
     </form>
 </body>
 
