@@ -5,32 +5,22 @@ const forthQuestion = document.querySelector('.subway-travel-input');
 const fifthQuestion = document.querySelector('.intercity-travel-input');
 const sixthQuestion = document.querySelector('.air-travel-input');
 
-firstQuestion.addEventListener("change", (e) => {
-    const text = e.target.value;
-    console.log(text);
+const fields = [
+    firstQuestion,
+    secondQuestion,
+    thirdQuestion,
+    forthQuestion,
+    fifthQuestion,
+    sixthQuestion
+];
+
+fields.forEach(element => {
+    element.addEventListener('input', (e) => {
+        calculateCar(e.target.value);
+    });
 });
 
-secondQuestion.addEventListener("input", (e) => {
-    const text = e.target.value;
-    console.log(text);
-});
-
-thirdQuestion.addEventListener("input", (e) => {
-    const text = e.target.value;
-    console.log(text);
-});
-
-forthQuestion.addEventListener("input", (e) => {
-    const text = e.target.value;
-    console.log(text);
-});
-
-fifthQuestion.addEventListener("input", (e) => {
-    const text = e.target.value;
-    console.log(text);
-});
-
-sixthQuestion.addEventListener("input", (e) => {
-    const text = e.target.value;
-    console.log(text);
-});
+const calculateCar = (liters) => {
+    liters = liters * 0.264 * 52;
+    console.log(liters);
+}
