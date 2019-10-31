@@ -1,4 +1,4 @@
-const fuelTypeo = document.querySelector('.select-fuel-type');
+const fuelType = document.querySelector('.select-fuel-type');
 const secondQuestion = document.querySelector('.car-commute-input');
 const thirdQuestion = document.querySelector('.bus-travel-input');
 const forthQuestion = document.querySelector('.subway-travel-input');
@@ -32,18 +32,19 @@ const transportType = {
 
 const calculateCarCO2 = (liters, fuelType) => liters * carFuels[fuelType] * weeksPerYear;
 
-const calculateTransport = (killometers, transType) => killometers * transportType[transType] * weeksPerYear;
+const calculateTransport = (kilometers, transType) => kilometers * transportType[transType] * weeksPerYear;
 
 secondQuestion.addEventListener("input", e => {
-    const result = calculateCarCO2(e.target.value, fuelTypeo.value);
+    const result = calculateCarCO2(e.target.value, fuelType.value);
+    carResultField.value = result + ' CO2';
     console.log(result);
 });
 
 fields.forEach(element => {
     element.addEventListener("input", e => {
+        const resultField = document.querySelector(`#${e.target.id}_result`);
         const result = calculateTransport(Number(e.target.value), e.target.id);
-        carResultField.value = result + ' CO2';
-        console.log(result);
+        resultField.value = result + ' CO2';
     });
 });
 
