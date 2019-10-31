@@ -16,7 +16,8 @@ const fields = [
 
 fields.forEach(element => {
     element.addEventListener('input', (e) => {
-        calculateCar(e.target.value);
+        (element === firstQuestion) ? console.log(e.target.value): calculateCar(e.target.value);
+
     });
 });
 
