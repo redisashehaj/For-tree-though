@@ -18,17 +18,21 @@ const fields = [
 
 const carFuels = {
     diesel: 2.7,
-    biodiesel: 2.5,
+    biodiesel: 2.5, //kg per CO2
     ethanol: 1.52,
     petrol: 2.32,
 }
 
 const transportType = {
-    bus: 2,
-    subway: 3,
-    train: 4,
-    air: 5
+    bus: 0.03,
+    subway: 0.75,
+    train: 0.17, //kg per mile , per km it would be divided by 0.6
+    air: 0.10 //the shorter the distance the more CO2 they emit
 }
+
+/* Short flights are calculated to be under 300 miles one-way with emissions of 0.254kg CO2e per passenger mile
+Medium flights are calculated to be 300-2300 miles one-way, average 1500 miles, with emissions of 0.144 kg CO2e per passenger mile
+Long flights are calculated to be > 2300 miles, average 3,000 miles one-way with emissions of 0.169kg CO2e per passenger mile */
 
 const calculateCarCO2 = (liters, fuelType) => liters * carFuels[fuelType] * weeksPerYear;
 
@@ -44,10 +48,11 @@ fields.forEach(element => {
         const resultField = document.querySelector(`#${e.target.id}_result`);
         const result = calculateTransport(Number(e.target.value), e.target.id);
         resultField.value = result + ' CO2';
+        return result;
     });
 });
 
-const total = () => {
+const totalCO2 = () => {
 
 }
 
