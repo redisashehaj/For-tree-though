@@ -30,6 +30,8 @@ const transportType = {
     air: 0.10 //the shorter the distance the more CO2 they emit
 }
 
+let array = [];
+
 /* Short flights are calculated to be under 300 miles one-way with emissions of 0.254kg CO2e per passenger mile
 Medium flights are calculated to be 300-2300 miles one-way, average 1500 miles, with emissions of 0.144 kg CO2e per passenger mile
 Long flights are calculated to be > 2300 miles, average 3,000 miles one-way with emissions of 0.169kg CO2e per passenger mile */
@@ -40,24 +42,41 @@ const calculateTransport = (kilometers, transType) => kilometers * transportType
 
 secondQuestion.addEventListener("input", e => {
     const result = calculateCarCO2(e.target.value, fuelType.value);
-    carResultField.value = result + ' CO2';
+    carResultField.value = result;
+    array.push(result);
 });
 
 fields.forEach(element => {
     element.addEventListener("input", e => {
         const resultField = document.querySelector(`#${e.target.id}_result`);
         const result = calculateTransport(Number(e.target.value), e.target.id);
-        resultField.value = result + ' CO2';
-        return result;
+        resultField.value = result;
+        array.push(result);
     });
 });
 
-const totalCO2 = () => {
+const totalAmountText = document.querySelector('#all-results');
+const totalTreesText = document.querySelector('#all-trees')
 
-}
+// const totalCO2 = array.reduce((a, b) => a + b, 0);
+// const totalTrees = Math.round(totalCO2 / 15.6);
+
+const newResult = (formData) => ({
+    bus: formData.get('bus'),
+    car: formData.get('car'),
+    subway: formData.get('subway'),
+    train: formData.get('train'),
+    air: formData.get('air')
+})
+
+const calcCO2 = ({ bus, car, subway, train, air }) => Number(bus) + Number(car) + Number(subway) + Number(train) + Number(air);
 
 const form = document.querySelector('.form');
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    console.log('submitted........!');
+    const formData = new FormData(form);
+    const result = newResult(formData);
+    const totalCO2 = calcCO2(result)
+    totalAmountText.value = Math.floor(totalCO2) + ' CO2';
+    totalTreesText.value = Math.round(totalCO2 / 15.6);
 });
