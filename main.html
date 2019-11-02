@@ -8,7 +8,7 @@
     <title>For tree</title>
     <link rel="icon" type="image/ico" href="sprout.png" />
     <link rel="stylesheet" href="another.css">
-    <script defer src="main.js"></script>
+    <script defer src="./main.js"></script>
 </head>
 
 <body class="page-wrapper">
@@ -16,52 +16,52 @@
         <div class="car-commute-div">
             <h3>- Car -</h3>
             <h4 class="car-commute-question-1">Select the type of fuel you use:</h4>
-            <select class="select-fuel-type" name="select-fuel-type">
-                            <option  value="type of fuel" disabled="disabled">Type of fuel</option>
+            <select class="select-fuel-type" name="select-fuel-type" style="font-size: 15px;">
+                            <option value="type of fuel" disabled="disabled">Type of fuel</option>
                                 <option value="petrol">Petrol</option>
                                 <option value="ethanol">Ethanol</option>
                                 <option value="biodiesel">Bio Diesel</option>
                                 <option value="diesel">Diesel Fuel</option>
                         </select>
             <h4 class="car-commute-question-2">Enter an estimated number of liters of fuel you use per week :</h4>
-            <input type="number" class="car-commute-input" id="car-commute-input" style="margin-bottom: 10px;" required>
-            <input type="text" value="Total amount of CO2" id="car_result" name="car" READONLY/>
+            <input type="number" class="car-commute-input" id="car-commute-input" style="margin-bottom: 10px; font-size: 12px;" required>
+            <input type="text" value="O2 KG/L" id="car_result" name="car" style="font-size: 12px;" READONLY/>
         </div>
         <div class="bus-commute-div">
             <h3>- Bus -</h3>
             <h4 class="bus-travel-question-3">Enter an estimated number of km you travel by bus per week :</h4>
-            <input type="number" class="bus-travel-input" style="margin-bottom: 10px;" id="bus" required>
-            <input type="text" value="Total amount of CO2" id="bus_result" name="bus" READONLY/>
+            <input type="number" class="bus-travel-input" style="margin-bottom: 10px; font-size: 12px;" id="bus" required>
+            <input type="text" value="CO2 KG/person" id="bus_result" name="bus" style="font-size: 12px;" READONLY/>
         </div>
-        <div class="subway-commute-div">
+        <div class="subway-commute-div ">
             <h3>- Subway -</h3>
             <h4 class="subway-travel-question-4">Enter an estimated number of km you travel with subway per week :</h4>
-            <input type="number" class="subway-travel-input" style="margin-bottom: 10px;" id="subway" required>
-            <input type="text" value="Total amount of CO2" id="subway_result" name="subway" READONLY/>
+            <input type="number" class="subway-travel-input" style="margin-bottom: 10px; font-size: 12px;" id="subway" required>
+            <input type="text" value="CO2 KG/person" id="subway_result" name="subway" style="font-size: 12px;" READONLY/>
         </div>
-        <div class="intercityrail-commute-div">
+        <div class="intercityrail-commute-div ">
             <h3>- Intercity rail -</h3>
             <h4 class="intercity-travel-question-5">Enter an estimated number of km you travel by long distance train per week :</h4>
-            <input type="number" class="intercity-travel-input" style="margin-bottom: 10px;" id="train" required>
-            <input type="text" value="Total amount of CO2" id="train_result" name="train" READONLY/>
+            <input type="number" class="intercity-travel-input " style="margin-bottom: 10px;font-size: 12px;" id="train" required>
+            <input type="text" value="CO2 KG/person" id="train_result" name="train" style="font-size: 12px;" READONLY/>
         </div>
         <div class="air-commute-div">
             <h3>- Air -</h3>
             <h4 class="air-travel-question-6">Enter an estimated number of km you travel by plane per year :</h4>
-            <input type="number" class="air-travel-input" style="margin-bottom: 10px;" id="air" required>
-            <input type="text" value="Total amount of CO2" id="air_result" name="air" READONLY/>
+            <input type="number" class="air-travel-input" style="margin-bottom: 10px; font-size: 12px;" id="air" required>
+            <input type="text" value="CO2 KG/person" id="air_result" name="air" style="font-size: 12px;" READONLY/>
         </div>
-        <div class="footer-wrap">
+        <div class="footer-wrap ">
             <div class="total-commute-div">
                 <h4>Total amount of CO2 you emmit per year in the air :</h4>
                 <input type="text" value="Total amount of CO2" id="all-results" style='font-size: 15px' READONLY/>
                 <h4>The number of trees you have to plant to offset your print :</h4>
                 <input type="text" value="Trees to build" id="all-trees" style='font-size: 15px' READONLY/>
             </div>
-            <div class="footer">
-                <button class="button-src" onclick="window.location='//carbonfund.org/calculation-methods/';">How did we do these calculations ?</button>
-                <input type="submit" value="Calculate" id="submit-button" style='font-size: 25px; margin-bottom: 10px;' READONLY/>
-                <button class="button-offset" onclick="window.location='//teamtrees.org/';">Offset your foootprint</button>
+            <div class="footer ">
+                <input type="button" class="button-src" onclick="window.location='//carbonfund.org/calculation-methods/' ;" value="How did we do these calculations ?">
+                <input type="submit" class="submit-button" value="Calculate " id="submit-button" style='margin-bottom: 10px;' READONLY/>
+                <input type="button" class="button-offset" onclick="window.location='//teamtrees.org/' ;" value="Offset your foootprint">
             </div>
         </div>
     </form>

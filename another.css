@@ -5,12 +5,16 @@ body {
     margin: 0;
 }
 
+* {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
 .car-commute-div,
 .bus-commute-div,
 .subway-commute-div,
 .intercityrail-commute-div,
 .air-commute-div {
-    background: rgba(51, 170, 51, .1);
+    background: rgba(51, 170, 51, .3);
     margin: 30px;
     border-radius: 25px;
 }
@@ -19,10 +23,10 @@ body {
 .footer-wrarp {
     width: 100%;
     height: 100%;
-    background-color: white;
-    background-position: center;
+    background: url(tree.jpg) no-repeat center center fixed;
+    /* background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%; */
 }
 
 .blur {
@@ -94,19 +98,18 @@ a.btn {
     transform: rotate(-45deg);
 }
 
-h4 {
-    color: #045911;
-}
-
 h3,
-p {
-    color: #14a6f5;
+p,
+h4 {
+    color: white;
 }
 
 form .footer {
     margin: 30px;
+    display: flex;
     align-content: center;
-    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
 }
 
 .footer input {
@@ -115,7 +118,7 @@ form .footer {
 }
 
 .footer-wrap {
-    background: rgba(51, 170, 51, .1);
+    background: rgba(51, 170, 51, .3);
     margin: 30px;
     border-radius: 25px;
 }
@@ -128,4 +131,9 @@ form .footer {
 .button-offset {
     font-size: 13px;
     margin-bottom: 10px;
+}
+
+.submit-button {
+    font-size: 13px;
+    margin-left: -4rem;
 }
